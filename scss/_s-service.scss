@@ -1,0 +1,15 @@
+.s-service {
+    @include paddingSection(90px);
+
+    .d-flex {
+        justify-content: space-between;
+        margin-top: 40px;
+        div {
+            width: 24.5%;
+            text-align: center;
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+}
