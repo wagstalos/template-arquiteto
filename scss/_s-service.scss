@@ -7,8 +7,15 @@
         div {
             width: 24.5%;
             text-align: center;
+            transition:
+                all .5s ease,
+                background-size .5s ease;
+            &:hover {
+                transform: scale(1.07);
+            }
             p {
                 margin-top: 10px;
+                color: $green;
             }
         }
     }
@@ -22,9 +29,11 @@
                 text-align: center;
                 img {
                     border-radius: 10px;
+                    margin: 0 auto;
                 }
                 p {
                     margin-top: 10px;
+                    margin-bottom: 40px;
                 }
             }
         }

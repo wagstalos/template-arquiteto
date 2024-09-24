@@ -6,6 +6,15 @@
     justify-content: space-between;
 }
 
+.text-outline {
+    font-weight: 700;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: #151414;
+    font-size: 86px;
+    color: rgba(75, 75, 75, 0);
+    opacity: 0.7;
+}
+
 .text-center {
     text-align: center;
 }
@@ -22,9 +31,6 @@
     color: $white;
 }
 
-.text-cancel {
-    color: #ced7e1;
-}
 
 .btn-whats {
     display: none;

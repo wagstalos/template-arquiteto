@@ -1,0 +1,87 @@
+.s-feedback {
+    @include paddingSection(180px);
+
+    .d-flex {
+        justify-content: space-around;
+        h2 {
+            font-size: 74px;
+            z-index: 10;
+            position: relative;
+        }
+    }
+    &__box1 {
+        width: 30%;
+
+        img {
+            margin-top: 20px;
+            width: 100%;
+            height: 350px;
+            border-radius: 20px;
+        }
+    }
+    &__box2 {
+        width: 60%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(7, 183, 193, 0.315)), url(../img/house.webp);
+        height: 550px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        position: relative;
+        z-index: 0;
+
+        img {
+            border-radius: 20px;
+        }
+
+        .card {
+            backdrop-filter: blur(10px);
+            // background: rgba(119, 119, 119, 0.3);
+            max-width: 500px;
+            padding: 16px;
+            border-radius: 16px;
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            border: 1px solid #ffffff2b;
+        }
+    }
+
+    @include responsive($mobile) {
+        padding: 0;
+        height: 600px;
+        .d-flex {
+            h2,
+            span {
+                font-size: 44px;
+                text-align: center;
+                top: 20px;
+            }
+        }
+        &__box1 {
+            width: 100%;
+            img {
+                display: none;
+            }
+            h2 {
+                color: $white;
+            }
+            .text-outline {
+                font-weight: 700;
+                -webkit-text-stroke-width: 0; /* Remove o stroke no mobile */
+                font-size: 86px;
+                color: #e0e0e0; /* Preenche o texto com uma cor visível */
+                opacity: 0.7;
+            }
+        }
+        &__box2 {
+            position: absolute;
+            width: 90%;
+
+            .card {
+                width: 94%;
+                right: 3%;
+            }
+        }
+    }
+}
