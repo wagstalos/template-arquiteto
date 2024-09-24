@@ -135,8 +135,6 @@
           <a href="" class="btn-primary">Veja nosso projetos </a>
         </div>
 
-
-
       </div>
 
     </div>
@@ -207,21 +205,21 @@
     </div>
 
     <div class="d-flex">
-      <div>
+      <div data-aos="flip-down">
         <img src="img/img2.webp" alt="Classic">
         <p>Classic</p>
       </div>
-      <div>
+      <div data-aos="flip-down">
         <img src="img/img4.webp" alt="Moderno">
         <p>Moderno</p>
       </div>
 
-      <div>
+      <div data-aos="flip-down">
         <img src="img/img5.webp" alt="">
         <p>Minimalista</p>
       </div>
 
-      <div>
+      <div data-aos="flip-down">
         <img src="img/img3.webp" alt="">
         <p>Contemporâneo</p>
       </div>
@@ -234,7 +232,7 @@
 
     <div class="d-flex">
 
-      <div class="s-feedback__box1">
+      <div class="s-feedback__box1" data-aos="zoom-in" data-aos-duration="1000">
         <h2>Engenharia <small>&</small> <span class="text-outline">Arquitetura</span> </h2>
         <div>
           <img src="img/house-small.webp" alt="casa">
@@ -242,9 +240,9 @@
       </div>
 
 
-      <div class="s-feedback__box2">
+      <div class="s-feedback__box2" data-aos="fade-up" data-aos-duration="1000">
         <!-- <img src="img/house.jpg" alt="casa"> -->
-        <div class="card">
+        <!-- <div class="card">
           <p class="color-light">
             "Trabalhar com o <b>Inspira ambiente </b> foi uma experiência incrível. Eles conseguiram captar exatamente o
             que eu
@@ -252,6 +250,49 @@
             cuidado."
           </p>
           <p class="color-light"> <strong>— Ana Oliveira</strong> </p>
+        </div> -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p class="color-light">
+                "Trabalhar com o <b>Inspira ambiente </b> foi uma experiência incrível. Eles conseguiram captar
+                exatamente o
+                que eu
+                queria, combinando funcionalidade com um design moderno e sofisticado. Cada detalhe foi pensado com
+                tanto
+                cuidado."
+              </p>
+              <p class="color-light"> <strong>— Ana Oliveira</strong> </p>
+            </div>
+            <div class="swiper-slide">
+              <p class="color-light">
+                "Trabalhar com o <b>Inspira ambiente </b> foi uma experiência incrível. Eles conseguiram captar
+                exatamente o
+                que eu
+                queria, combinando funcionalidade com um design moderno e sofisticado. Cada detalhe foi pensado com
+                tanto
+                cuidado."
+              </p>
+              <p class="color-light"> <strong>— Ana Oliveira</strong> </p>
+            </div>
+            <div class="swiper-slide">
+              <p class="color-light">
+                "Trabalhar com o <b>Inspira ambiente </b> foi uma experiência incrível. Eles conseguiram captar
+                exatamente o
+                que eu
+                queria, combinando funcionalidade com um design moderno e sofisticado. Cada detalhe foi pensado com
+                tanto
+                cuidado."
+              </p>
+              <p class="color-light"> <strong>— João da Silva</strong> </p>
+            </div>
+            <!-- Adicione mais slides se necessário -->
+          </div>
+          <!-- Adicione navegação ou paginação, se necessário -->
+          <div class="swiper-pagination"></div>
+
         </div>
 
       </div>
@@ -467,6 +508,23 @@
   <script src="js/all.js"></script>
   <script>
     AOS.init();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.swiper', {
+        speed: 400,
+        spaceBetween: 100,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
   </script>
 </body>
 

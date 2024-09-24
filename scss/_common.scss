@@ -31,7 +31,6 @@
     color: $white;
 }
 
-
 .btn-whats {
     display: none;
     position: fixed;
@@ -187,4 +186,53 @@
 .my-auto {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    backdrop-filter: blur(10px);
+    padding: 16px;
+    border-radius: 50px;
+    color: $white;
+    border: 1px solid #ffffff2b;
+
+    &:hover {
+        background-color: $green;
+        color: $white;
+    }
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    left: auto;
+    right: 60px !important;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    right: 22px;
+    left: auto;
+}
+
+:root {
+    --swiper-navigation-size: 15px;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 89%;
+    width: calc(var(--swiper-navigation-size) / 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

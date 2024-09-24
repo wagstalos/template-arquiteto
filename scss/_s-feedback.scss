@@ -21,7 +21,7 @@
     }
     &__box2 {
         width: 60%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(7, 183, 193, 0.315)), url(../img/house.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(5, 5, 5, 0.5)), url(../img/house.webp);
         height: 550px;
         background-position: center;
         background-repeat: no-repeat;
@@ -34,51 +34,57 @@
             border-radius: 20px;
         }
 
-        .card {
+        .card,
+        .swiper {
             backdrop-filter: blur(10px);
-            // background: rgba(119, 119, 119, 0.3);
             max-width: 500px;
             padding: 16px;
             border-radius: 16px;
             position: absolute;
-            bottom: 16px;
+            bottom: 50px;
             right: 16px;
             border: 1px solid #ffffff2b;
         }
     }
 
-    @include responsive($mobile) {
+    @include responsive(1150px) {
         padding: 0;
         height: 600px;
         .d-flex {
-            h2,
-            span {
+            h2 {
                 font-size: 44px;
                 text-align: center;
                 top: 20px;
+                width: 80%;
+                color: #fff;
+                margin: 0 auto;
             }
         }
         &__box1 {
             width: 100%;
+            z-index: 2;
             img {
                 display: none;
             }
             h2 {
-                color: $white;
+                color: #e0e0e0;
             }
             .text-outline {
                 font-weight: 700;
                 -webkit-text-stroke-width: 0; /* Remove o stroke no mobile */
-                font-size: 86px;
+                font-size: 63px;
                 color: #e0e0e0; /* Preenche o texto com uma cor visível */
-                opacity: 0.7;
+                opacity: 1;
             }
         }
         &__box2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(5, 5, 5, 0.5)), url(../img/house.webp);
             position: absolute;
             width: 90%;
+            z-index: 1;
 
-            .card {
+            .card,
+            .swiper {
                 width: 94%;
                 right: 3%;
             }
